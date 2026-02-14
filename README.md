@@ -19,6 +19,24 @@ Before we rework the seat, let us summarize the different part numbers of the se
 - Connector: BMW 91676881
 ![image](./doc/pics/seat.avif)
 
+## Electronics
+### Seat heater
+The seat uses an ECU to control the seat heater. Instead of using the ECU, I disconnected the wiring harness for the back rest and seating surface. Those wiring harnesses have three wires:
+- Bround: GND
+- Brown/Green: BAT (12V-14V)
+- Light grey: Temperature information
+According to some measurements, there are strong indications that the temperature pin is connected to GND via a 10kOhm NTC.
+The planned implementation will be as follows: By enabling a heater switch, the heater is started. Due to safety concerns, both seat heaters are used in series. A timer of approx. 10mins starts after enabling the heat seater. Once the timer expires, the seat heater is switched off. Additionally, the 10kOhm NTC is monitored and at a temperature beyond 50degC (hysteresis 5degC), the heater is temporarily switched off.
+![image](./doc/pics/heater_connector.png)
+
+### Fuse
+I decided to protect the device with a 10A fuse.
+
+### Seat knobs
+Once the main switch is enabled, the seat knobs to change the position of the seat can be used. You only need to connect GND and BAT (12V-14V) to the yellow main connector (brown and red/blue).
+![image](./doc/pics/seat_knob_connector.png)
+
+
 ## Rework
-As a first step, please use a professional service to remove the airbag from the seat. Please note that there might be legal constraints to do that without professional service.
-You should also disconnect the connector from the head support to the ECU below the seat to avoid any kind of emergency action.
+As a first step, please use a professional service to remove the airbag from the seat. Please note that there might be legal requirements that have to be fulfilled. You should also disconnect the connector from the head support to the ECU below the seat to avoid any kind of emergency action.
+
