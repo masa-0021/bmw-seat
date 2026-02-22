@@ -30,13 +30,19 @@ The planned implementation will be as follows: By enabling a heater switch, the 
 ![image](./doc/pics/heater_connector.png)
 
 ### Fuse
-I decided to protect the device with a 10A fuse.
+I decided to protect the device with a 5A fuse. Consequently, due to the short wires, 0.5mm2 cable cross section is sufficient.
 
 ### Seat knobs
 Once the main switch is enabled, the seat knobs to change the position of the seat can be used. You only need to connect GND and BAT (12V-14V) to the yellow main connector (brown and red/blue).
 ![image](./doc/pics/seat_knob_connector.png)
 
+### Switches 
+I used two key switches. The first one is a general switch for power supply, both for the seat as well as for the microcontroller ATMEGA328. The purpose of the 2nd switch is the start of the seat heater only.
+
 
 ## Rework
 As a first step, please use a professional service to remove the airbag from the seat. Please note that there might be legal requirements that have to be fulfilled. You should also disconnect the connector from the head support to the ECU below the seat to avoid any kind of emergency action.
+In my case, I used a wooden plate (80mmx60mmx18mm) in combination with strips of wood to screw the seat to a wooden basis:
+![image](./doc/pics/seat_plate.png)
+
 
