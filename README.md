@@ -19,6 +19,11 @@ Before we rework the seat, let us summarize the different part numbers of the se
 - Connector: BMW 91676881
 ![image](./doc/pics/seat.avif)
 
+## Rework
+As a first step, please use a professional service to remove the airbag from the seat. Please note that there might be legal requirements that have to be fulfilled. You should also disconnect the connector from the head support to the ECU below the seat to avoid any kind of emergency action.
+In my case, I used a wooden plate (80mmx60mmx18mm) in combination with strips of wood to screw the seat to a wooden basis:
+![image](./doc/pics/seat_plate.png)
+
 ## Electronics
 ### Seat heater
 The seat uses an ECU to control the seat heater. Instead of using the ECU, I disconnected the wiring harness for the back rest and seating surface. Those wiring harnesses have three wires:
@@ -40,9 +45,5 @@ Once the main switch is enabled, the seat knobs to change the position of the se
 I used two key switches. The first one is a general switch for power supply, both for the seat as well as for the microcontroller ATMEGA328. The purpose of the 2nd switch is the start of the seat heater only.
 
 
-## Rework
-As a first step, please use a professional service to remove the airbag from the seat. Please note that there might be legal requirements that have to be fulfilled. You should also disconnect the connector from the head support to the ECU below the seat to avoid any kind of emergency action.
-In my case, I used a wooden plate (80mmx60mmx18mm) in combination with strips of wood to screw the seat to a wooden basis:
-![image](./doc/pics/seat_plate.png)
 
 
