@@ -37,6 +37,9 @@ The planned implementation will be as follows: By enabling a heater switch, the 
 ### Fuse
 I decided to protect the device with a 5A fuse. Consequently, due to the short wires, 0.5mm2 cable cross section is sufficient.
 
+### Power supply
+The system requires UBAT (12V-14V) and a 5V supply for the ATMEGA and the relay. In the first step, I used a passively cooled L7805 (1.5A). Unfortunately, cooling performance was not sufficient. Hence, I decided to use a DC/DC buck converter based on MP1584EN (max. 3A). The output voltage was depending on load and input voltage quite stable: 5.00V +/- 0.05V.
+
 ### Seat knobs
 Once the main switch is enabled, the seat knobs to change the position of the seat can be used. You only need to connect GND and BAT (12V-14V) to the yellow main connector (brown and red/blue).
 ![image](./doc/pics/seat_knob_connector.png)
